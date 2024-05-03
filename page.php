@@ -117,12 +117,12 @@ else :
                                                         <div class="title-group">
                                                             <div class="left">
                                                                 <?php if ( ! empty($person_name) ) : ?>
-                                                                    <h6 class="h6 name"><?php echo $person_name; ?></h6>
+                                                                    <h6 class="h6 name"><?php echo esc_html($person_name); ?></h6>
                                                                 <?php
                                                                 endif;
                                                                 if ( ! empty($person_designation) ) :
                                                                 ?>
-                                                                    <div class="designation"><?php echo $person_designation; ?></div>
+                                                                    <div class="designation"><?php echo esc_html($person_designation); ?></div>
                                                                 <?php endif; ?>
                                                             </div>
                                                             <div class="right">
@@ -131,7 +131,7 @@ else :
                                                         </div>
                                                         <?php if ( ! empty($person_description) ) : ?>
                                                             <p class="desc">
-                                                                <?php echo $person_description; ?>
+                                                                <?php echo esc_html($person_description); ?>
                                                             </p>
                                                         <?php endif; ?>
                                                     </div>
@@ -170,16 +170,16 @@ else :
                             <div class="row">
                                 <div class="col-lg-6">
                                     <?php if ( ! empty($stats_heading) ) : ?>
-                                        <h2 class="h3 title"><?php echo $stats_heading; ?></h2>
+                                        <h2 class="h3 title"><?php echo esc_html($stats_heading); ?></h2>
                                     <?php
                                     endif;
                                     if ( ! empty($stats_description) ) : ?>
-                                        <p class="desc"><?php echo $stats_description; ?></p>
+                                        <p class="desc"><?php echo esc_html($stats_description); ?></p>
                                     <?php
                                     endif;
                                     if ( ! empty($learn_more_button) ) : ?>
                                         <div class="btn-wrap">
-                                            <a href="#" class="btn-sm btn-primary btn-icon-right"><?php echo $learn_more_button; ?>
+                                            <a href="#" class="btn-sm btn-primary btn-icon-right"><?php echo esc_html($learn_more_button); ?>
                                                 <img src="<?php echo get_template_directory_uri() ?>/assets/images/btn-arrow-right.svg" alt="arrow" class="svg" /></a>
                                         </div>
 
@@ -204,12 +204,12 @@ else :
                                                                                                                                             style="background-color: <?php echo $card_background_color;
                                                                                                                                         endif; ?>;">
                                                     <?php if ( ! empty($stats_number) ) : ?>
-                                                        <h3 class="h4 num">300<span>+</span></h3>
+                                                        <h3 class="h4 num"><?php echo esc_html($stats_number); ?><span>+</span></h3>
                                                     <?php
                                                     endif;
                                                     if ( ! empty($stats_subtitle) ) :
                                                     ?>
-                                                        <p class="subtitle"><?php echo $stats_subtitle ?></p>
+                                                        <p class="subtitle"><?php echo esc_html($stats_subtitle); ?></p>
                                                     <?php endif; ?>
                                                 </li>
                                             <?php
